@@ -12,10 +12,101 @@ Web3DEngine.ExtendType( PlayerControl , Web3DEngine.MonoBehaviour, {
         if (this.f < 100)this.f++;
     }
 });
+function mytest(){
+
+    var cylinder=new THREE.CylinderGeometry(0.3,1,8,50,5);//顶面半径, 底面半径, 圆柱体的高度, 顶面分段, 高度分段
+    var material= new THREE.MeshBasicMaterial({color:0xffffff, transparent: true,opacity: 0.5 });
+    //var mesh= new THREE.InstancedMesh(cylinder, material,1);
+    var mesh= new THREE.Mesh(cylinder, material);
+    var scene    =appInst._renderScenePass.scene;
+    scene.add(mesh);
+}
+function makeInstanced(geo, mtxObj, oriName, type) {
+    //console.log(geo);//console.log(geo,mtxObj,oriName,type);
+    //console.log(mtxObj);//{446=IfcColumn: Array(16), 540=IfcColumn: Array(16)}
+    //console.log(oriName);//2336=IfcColumn
+    //console.log(type);//IfcColumn
+    //这个函数只被reuseDataParser函数调用
+    let mtxKeys = Object.keys(mtxObj);
+    let instanceCount = mtxKeys.length + 1;
+
+    //生成mesh只需要两样东西，材质material和几何igeo
+    //1.material
+    var vert = document.getElementById('vertInstanced').textContent;
+    var frag = document.getElementById('fragInstanced').textContent;
+
+    let myTexture = selectTextureByType(type,0.001);
+
+    var uniforms={
+        texture:{type: 't', value: myTexture}
+    };
+    var material = new THREE.RawShaderMaterial({
+        uniforms: uniforms,
+        vertexShader: vert,
+        fragmentShader: frag
+    });
+
+    //2.igeo几何//InstancedBufferGeometry//将原网格中的geo拷贝到igeo中
+    var igeo=new THREE.InstancedBufferGeometry();//geometry//threeJS中有一种对象叫InstancedMesh，构造方法为InstancedMesh( geometry : BufferGeometry, material : Material, count : Integer )
+
+    var vertices = geo.attributes.position.clone();
+    igeo.addAttribute('position', vertices);//设置几何中的点
+    igeo.setIndex(geo.index);
+    var mcol0 = new THREE.InstancedBufferAttribute(
+        new Float32Array(instanceCount * 3), 3
+    );
+    var mcol1 = new THREE.InstancedBufferAttribute(
+        new Float32Array(instanceCount * 3), 3
+    );
+    var mcol2 = new THREE.InstancedBufferAttribute(
+        new Float32Array(instanceCount * 3), 3
+    );
+    var mcol3 = new THREE.InstancedBufferAttribute(
+        new Float32Array(instanceCount * 3), 3
+    );
+
+    //设置原始mesh的变换矩阵与名称
+    //setXYZ(i,x,y,z)
+    mcol0.setXYZ(0, 1, 0, 0);
+    mcol1.setXYZ(0, 0, 1, 0);
+    mcol2.setXYZ(0, 0, 0, 1);
+    mcol3.setXYZ(0, 0, 0, 0);
+    let instancedMeshName = oriName;
+    for (let i = 1, ul = instanceCount; i < ul; i++) {
+        let currentName = mtxKeys[i - 1];
+        let mtxElements = mtxObj[currentName];
+        mcol0.setXYZ(i, mtxElements[0], mtxElements[1], mtxElements[2]);
+        mcol1.setXYZ(i, mtxElements[4], mtxElements[5], mtxElements[6]);
+        mcol2.setXYZ(i, mtxElements[8], mtxElements[9], mtxElements[10]);
+        mcol3.setXYZ(i, mtxElements[12], mtxElements[13], mtxElements[14]);
+        instancedMeshName += ('_' + currentName);
+    }
+    igeo.addAttribute('mcol0', mcol0);
+    igeo.addAttribute('mcol1', mcol1);
+    igeo.addAttribute('mcol2', mcol2);
+    igeo.addAttribute('mcol3', mcol3);
+
+    var colors = new THREE.InstancedBufferAttribute(
+        new Float32Array(instanceCount * 3), 3
+    );
+    for (let i = 0, ul = colors.count; i < ul; i++) {// colors.setXYZ(i, color.r, color.g, color.b);
+        colors.setXYZ(i, 0.33, 0.33, 0.33);
+    }
+    igeo.addAttribute('color', colors);
+
+    //3.mesh
+    var mesh = new THREE.Mesh(igeo, material);//生成的还是mesh对象
+    mesh.scale.set(0.001, 0.001, 0.001);
+    mesh.material.side = THREE.DoubleSide;
+    mesh.frustumCulled = false;
+    mesh.name = oriName;
+    sceneRoot.add(mesh);
+}
 function playerControl(f,myThis){
     sceneSet(f);
     updateWindowSize();
     if (f == 1) {
+        mytest();
         //var mesh=myDraw3D.draw();new ParameMeasure(mesh,0);
 
         myPlayerControlAssistant.player = myThis;
