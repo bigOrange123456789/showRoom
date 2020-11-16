@@ -1,0 +1,165 @@
+{
+	"application_properties": {
+		"antiAlias": true,
+		"fillMode": "FILL_WINDOW",
+		"resolutionMode": "AUTO",
+		"height": 720,
+		"width": 1280,
+		"use3dPhysics": true,
+		"preferWebGl2": true,
+		"preserveDrawingBuffer": false,
+		"scripts": [],
+		"transparentCanvas": false,
+		"useDevicePixelRatio": true,
+		"useLegacyScripts": false,
+		"vr": false,
+		"loadingScreenScript": null,
+		"layerOrder": [
+			{
+				"layer": 0,
+				"transparent": false,
+				"enabled": true
+			},
+			{
+				"layer": 1,
+				"transparent": false,
+				"enabled": true
+			},
+			{
+				"layer": 2,
+				"transparent": false,
+				"enabled": true
+			},
+			{
+				"layer": 0,
+				"transparent": true,
+				"enabled": true
+			},
+			{
+				"layer": 3,
+				"transparent": false,
+				"enabled": true
+			},
+			{
+				"layer": 3,
+				"transparent": true,
+				"enabled": true
+			},
+			{
+				"layer": 4,
+				"transparent": true,
+				"enabled": true
+			}
+		],
+		"item_id": 1598943442725,
+		"project": 1598943442725,
+		"name": "project",
+		"useKeyboard": true,
+		"useMouse": true,
+		"useTouch": true,
+		"useGamepads": false,
+		"i18nAssets": [],
+		"layers": {
+			"0": {
+				"name": "Default",
+				"opaqueSortMode": 2,
+				"transparentSortMode": 3
+			},
+			"1": {
+				"name": "TransparentFX",
+				"opaqueSortMode": 2,
+				"transparentSortMode": 3
+			},
+			"2": {
+				"name": "Ignore Raycast",
+				"opaqueSortMode": 0,
+				"transparentSortMode": 3
+			},
+			"3": {
+				"name": "3",
+				"opaqueSortMode": 0,
+				"transparentSortMode": 3
+			},
+			"4": {
+				"name": "Water",
+				"opaqueSortMode": 1,
+				"transparentSortMode": 1
+			},
+			"5": {
+				"name": "UI",
+				"opaqueSortMode": 2,
+				"transparentSortMode": 3
+			},
+			"6": {
+				"name": "6",
+				"opaqueSortMode": 2,
+				"transparentSortMode": 3
+			},
+			"7": {
+				"name": "7",
+				"opaqueSortMode": 2,
+				"transparentSortMode": 3
+			}
+		}
+	},
+	"scenes": [
+		{
+			"name": "newScene",
+			"url": "1598943442728.json"
+		}
+	],
+	"assets": {
+		"1598943874704": {
+			"id": 1598943874704,
+			"name": "image",
+			"revision": null,
+			"tags": [],
+			"preload": false,
+			"meta": null,
+			"data": null,
+			"type": "folder",
+			"file": null,
+			"region": ""
+		},
+		"1598954856907": {
+			"id": 1598954856907,
+			"name": "Script",
+			"revision": null,
+			"tags": [],
+			"preload": false,
+			"meta": null,
+			"data": null,
+			"type": "folder",
+			"file": null,
+			"region": ""
+		},
+		"1599022769793": {
+			"id": 1599022769793,
+			"name": "playerControl.js",
+			"revision": null,
+			"tags": [],
+			"preload": true,
+			"meta": null,
+			"data": {
+				"order": 100,
+				"scripts": {
+					"playerControl": {
+						"attributesOrder": [
+						],
+						"attributes": {
+						}
+					}
+				},
+				"loading": false
+			},
+			"type": "script",
+			"file": {
+				"filename": "playerControl.js",
+				"size": 5140,
+				"hash": "c08de380ee9a11ea9e7761a946247866",
+				"path": "files/playerControl.js"
+			},
+			"region": ""
+		}
+	}
+}

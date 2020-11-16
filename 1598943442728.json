@@ -1,0 +1,1344 @@
+{
+	"settings": {
+		"physics": {
+			"gravity": [
+				0,
+				-0.98,
+				0
+			]
+		},
+		"render": {
+			"post_process": {
+				"overrides": {
+					"Bloom": {
+						"enabled": false,   "note0":"",
+						"strength": 0.15,   "note1":"强度",
+						"kernelSize": 0.5,  "note":"",
+						"sigma": 0.5,
+						"resolution": 512
+					},
+					"AmbientOcclusion": {
+						"enabled": false,
+						"kernelRadius": 4,
+						"kernelSize": 4,
+						"minDistance": 0.001,
+						"maxDistance": 0.005
+					},
+					"Highlights": {
+						"enabled": false,
+						"shadows": [
+							255,
+							255,
+							255,
+							177.5
+						],
+						"midtones": [
+							255,
+							255,
+							255,
+							177.5
+						],
+						"highlights": [
+							255,
+							255,
+							255,
+							177.5
+						],
+						"shadows_pos": [
+							97,
+							121,
+							100
+						],
+						"midtones_pos": [
+							97,
+							121,
+							100
+						],
+						"highlights_pos": [
+							97,
+							121,
+							100
+						],
+						"amount": 1
+					},
+					"Vignette": {
+						"enabled": false,
+						"offset": 0.8,
+						"darkness": 0.8
+					},
+					"ToneMapping": {
+						"enabled": false,
+						"exposure": 1000,
+						"whitePoint": 1
+					},
+					"Gamma": {
+						"enabled": false,
+						"brightness": 0,
+						"contrast": 1,
+						"gamma": 1,
+						"coeffs": [
+							0.5,
+							0.5,
+							0.5
+						]
+					},
+					"Saturation": {
+						"enabled": false,
+						"hue": 0,
+						"saturation": 1,
+						"value": 1
+					},
+					"Exposure": {
+						"enabled": false,
+						"adaptive": true
+					}
+				},
+				"enabled": true
+			},
+			"fog_end": 1000,
+			"fog_start": 1,
+			"global_ambient": [
+				0.2,
+				0.2,
+				0.2
+			],
+			"ambientLightIntensity": 3,
+			"fog_color": [
+				0,
+				0,
+				0
+			],
+			"fog": "none",
+			"fog_density": 0.01,
+			"gamma_correction": 1,
+			"tonemapping": 0,
+			"exposure": 1,
+			"skybox": null,
+			"skybox_color": [
+				0,
+				0,
+				0
+			],
+			"skyboxIntensity": 0.8,
+			"skyboxMip": 0,
+			"lightmap": [],
+			"lightmapSizeMultiplier": 16,
+			"lightmapMaxResolution": 2048,
+			"lightmapMode": 1,
+			"toneMappingExposure": 0.281,
+			"lightmapUV2": {}
+		}
+	},
+	"id": 1598943442728,
+	"scene": 1598943442728,
+	"item_id": 1598943442728,
+	"project_id": 1598943442725,
+	"branch_id": "",
+	"checkpoint_id": "",
+	"name": "newScene",
+	"uniqueId": 1598943442728,
+	"_id": "5f4df0d2047e0f14840f6e9f",
+	"entities": {
+		"7a6d45c8-f67a-452c-b760-5a227ca72e48": {
+			"components": {
+				"transform": {
+					"scale": [
+						1,
+						1,
+						1
+					],
+					"position": [
+						0,
+						0,
+						0
+					],
+					"rotation": [
+						0,
+						0,
+						0
+					]
+				}
+			},
+			"name": "Root",
+			"parent": null,
+			"resource_id": "7a6d45c8-f67a-452c-b760-5a227ca72e48",
+			"tags": [],
+			"layers": [
+				0
+			],
+			"enabled": true,
+			"children": [
+				"6591a6d9-ae87-4d00-bd53-ed2a323b9792",
+				"364e757a-c675-4c7a-a7f5-c3c9c3d3e1da",
+				"d6c256b6-ddb8-4eeb-ab56-29a7541c7e57",
+				"4854d737-16ff-45b7-b9fa-33946658dba3"
+			]
+		},
+		"6591a6d9-ae87-4d00-bd53-ed2a323b9792": {
+			"name": "展画",
+			"tags": [],
+			"enabled": true,
+			"resource_id": "6591a6d9-ae87-4d00-bd53-ed2a323b9792",
+			"parent": "7a6d45c8-f67a-452c-b760-5a227ca72e48",
+			"children": [
+				"98247978-5f9b-4580-b5a1-a3149466d796",
+				"5b92a7f9-1d51-404d-9d2a-e74bf6bf6fd0",
+				"94ef415a-2ed4-43ff-a952-7fa10f0f91ad",
+				"51dcc4f0-6111-4668-a767-bc236dbe5bc8",
+				"f1eabbd9-64e2-4644-80ad-ffc4f1e46e88",
+				"f9cc2cdf-0444-4462-a7ce-b60f244b7d99",
+				"decd0bf7-34c6-4dd5-9e66-abb1a5e9e92d",
+				"cb34177f-b8f9-4220-a0e8-4ff11c5b4295",
+				"492b3e3c-5590-41cf-bc20-aa81a1396321",
+				"ee6584e3-629c-469b-8669-6f6a505b6a16",
+				"6a0376e6-be11-4bc5-bbe7-051c2745c8c1",
+				"7f253ec0-b503-400d-9341-a5d857dc173e",
+				"13434a0f-7b0e-4e29-954f-ef5662e204a3",
+				"aaaa9158-a666-40ea-9ef2-f8d82bb577fc",
+				"5b44a79d-6800-42b5-80c1-1b62396a8c43",
+				"ef92244d-dd20-4aa9-a127-b0ddd3c3d8fb",
+				"70a5abc2-ced9-42b3-a583-925e337acf62",
+				"b6838558-b513-47ab-a24a-02ce889e60f3",
+				"8f0b15fe-bbe4-4230-b7c9-b4249ddd6ce6",
+				"bf40dbe2-6dbe-463c-b656-bce5b83e1d9c",
+				"e80e33f8-0f44-4368-a1d4-225404656b66",
+				"d56f7ebf-6e3f-4194-8568-6d890963aaf5",
+				"c81bd6fa-1e5b-4886-858d-8a8db600f8cc",
+				"067b3e26-b317-45b1-9b2f-92925c4d1db1",
+				"901d8d24-4e7a-4caa-9cba-4f0e8adea4d5",
+				"3dc2d23d-4091-4f9b-a059-37fa27293a69",
+				"5f0fdab2-2597-4f48-a838-95a1b45196cf",
+				"553b2236-d23e-4e81-afcb-03f756100ce9",
+				"b4a2179c-19f6-4bc0-8d46-ab6f03caae96",
+				"f9e76188-bf11-42d5-98a5-c63c8fdd089a",
+				"e4218333-c8b7-400a-bf1d-406cf3df877b",
+				"81e34758-2210-48fb-b5b0-07d78c31f90d",
+				"b2b3fd2e-8a4b-43bf-9f08-37f742b74cde",
+				"c56b561d-69c2-437a-804c-e7ab99e80b45",
+				"7a5708d3-37dc-43b8-a665-859a331eb68f",
+				"79fba7e6-14c7-47cd-9356-bc16fde71e59",
+				"04051730-7132-4aa3-bce9-f7b943a53314",
+				"51a76a4a-4cf7-43d2-bc31-46d63a05e33b",
+				"feb40fdb-50f0-405d-98e3-a4c819d710ff",
+				"cd27833d-6de2-479f-befb-3efd50c0e1c1",
+				"0b0b04d2-04be-4a51-a2bc-8970b767a96a",
+				"49d436f1-2c5c-417f-903b-40799caab1cd",
+				"8d54b286-3aec-4d2f-b8b7-600a1c9ff4e1",
+				"f286ebd0-d0fb-441c-a94b-93349243fbc0",
+				"9cd0cea0-dcc3-417c-9726-263d7132115b",
+				"283ea95a-000f-484f-87b4-f51a37d3d03c",
+				"3009b033-ead1-4576-918d-cdf0c6d352e2",
+				"acff8121-6a8b-4217-a8f4-de23fb22d821",
+				"9365d566-ed4d-4cb3-9f12-770f4deecadf",
+				"de1afe65-9a63-49cd-b90b-64b10f3bc693",
+				"94c17a8b-d040-4f9d-9544-53837eae81c6",
+				"18afe513-6ae1-4fbe-8061-7e254e4fc9f7",
+				"27eb51c3-4884-4b77-92f0-25ad1fd99fd5"
+			],
+			"layers": [
+				0
+			],
+			"components": {
+				"transform": {
+					"position": [
+						0,
+						0,
+						0
+					],
+					"rotation": [
+						0,
+						0,
+						0
+					],
+					"scale": [
+						1,
+						1,
+						1
+					]
+				}
+			}
+		},
+		"364e757a-c675-4c7a-a7f5-c3c9c3d3e1da": {
+			"name": "视频展示",
+			"tags": [],
+			"enabled": true,
+			"resource_id": "364e757a-c675-4c7a-a7f5-c3c9c3d3e1da",
+			"parent": "7a6d45c8-f67a-452c-b760-5a227ca72e48",
+			"children": [
+				"2f35022a-41ba-4741-afb4-bbfa5734d08b",
+				"312cf473-cc80-4121-9b84-c0678806835c",
+				"6f77309a-0127-425e-a0d0-52085db2b3da",
+				"1ea3e322-6873-45b3-b6d8-f9e9bc1cb39c",
+				"0a0c9347-1795-4286-bcd2-0f0b1576a186",
+				"ec349ce1-36b2-40b5-a50b-a9b5c0847df6",
+				"69bf49ff-001f-482a-80ca-30b96707952c",
+				"5f2970d9-9979-44c0-a4ee-26b0ad80308b",
+				"c8be97eb-79a8-4461-bd08-fd40f76da1b9"
+			],
+			"layers": [
+				0
+			],
+			"components": {
+				"transform": {
+					"position": [
+						0,
+						0,
+						0
+					],
+					"rotation": [
+						0,
+						0,
+						0
+					],
+					"scale": [
+						1,
+						1,
+						1
+					]
+				}
+			}
+		},
+		"2f35022a-41ba-4741-afb4-bbfa5734d08b": {
+			"name": "视频展品1",
+			"tags": [],
+			"enabled": true,
+			"resource_id": "2f35022a-41ba-4741-afb4-bbfa5734d08b",
+			"parent": "364e757a-c675-4c7a-a7f5-c3c9c3d3e1da",
+			"children": [],
+			"layers": [
+				0
+			],
+			"components": {
+				"MeshFilter": {
+					"type": "cube",
+					"mesh": null
+				},
+				"MeshRenderer": {
+					"enabled": true,
+					"material": null,
+					"castShadow": false,
+					"receiveShadow": false,
+					"lightMapStatic": false
+				},
+				"transform": {
+					"position": [
+						5.723497637760526,
+						2.878619042065737,
+						-1.5858898669788166
+					],
+					"rotation": [
+						-25.163522352320953,
+						0,
+						0
+					],
+					"scale": [
+						0.9978760406923257,
+						0.7051158227424201,
+						0.02690688593969355
+					]
+				}
+			},
+			"position": [
+				5.56263878873934,
+				3.1955689589986536,
+				-3.6568485133316755
+			],
+			"scale": [
+				1.7288684936943646,
+				0.4921895331368236,
+				0.026906885939693544
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			]
+		},
+		"312cf473-cc80-4121-9b84-c0678806835c": {
+			"name": "视频展品2",
+			"tags": [],
+			"enabled": true,
+			"resource_id": "312cf473-cc80-4121-9b84-c0678806835c",
+			"parent": "364e757a-c675-4c7a-a7f5-c3c9c3d3e1da",
+			"children": [],
+			"layers": [
+				0
+			],
+			"components": {
+				"MeshFilter": {
+					"type": "cube",
+					"mesh": null
+				},
+				"MeshRenderer": {
+					"enabled": true,
+					"material": null,
+					"castShadow": false,
+					"receiveShadow": false,
+					"lightMapStatic": false
+				},
+				"transform": {
+					"position": [
+						5.723497637760526,
+						1.5645065816537322,
+						-1.0815870631917275
+					],
+					"rotation": [
+						-13.906256134829677,
+						0,
+						0
+					],
+					"scale": [
+						0.9978760406923257,
+						0.6995160645344313,
+						0.026906885939693558
+					]
+				}
+			},
+			"position": [
+				5.56263878873934,
+				3.1955689589986536,
+				-3.6568485133316755
+			],
+			"scale": [
+				1.7288684936943646,
+				0.4921895331368236,
+				0.026906885939693544
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			]
+		},
+		"6f77309a-0127-425e-a0d0-52085db2b3da": {
+			"name": "视频展品3",
+			"tags": [],
+			"enabled": true,
+			"resource_id": "6f77309a-0127-425e-a0d0-52085db2b3da",
+			"parent": "364e757a-c675-4c7a-a7f5-c3c9c3d3e1da",
+			"children": [],
+			"layers": [
+				0
+			],
+			"components": {
+				"MeshFilter": {
+					"type": "cube",
+					"mesh": null
+				},
+				"MeshRenderer": {
+					"enabled": true,
+					"material": null,
+					"castShadow": false,
+					"receiveShadow": false,
+					"lightMapStatic": false
+				},
+				"transform": {
+					"position": [
+						7.245467093559472,
+						2.8702654542506,
+						-0.018179472002607444
+					],
+					"rotation": [
+						0,
+						0,
+						-25.030095357057128
+					],
+					"scale": [
+						0.028843530517391566,
+						0.6853404592567071,
+						0.9831781610918857
+					]
+				}
+			},
+			"position": [
+				9.511803265725652,
+				3.1955689589986536,
+				0.0017590657419701006
+			],
+			"scale": [
+				0.028843530517391563,
+				0.4921895331368236,
+				1.7049013079239332
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			]
+		},
+		"1ea3e322-6873-45b3-b6d8-f9e9bc1cb39c": {
+			"name": "视频展品4",
+			"tags": [],
+			"enabled": true,
+			"resource_id": "1ea3e322-6873-45b3-b6d8-f9e9bc1cb39c",
+			"parent": "364e757a-c675-4c7a-a7f5-c3c9c3d3e1da",
+			"children": [],
+			"layers": [
+				0
+			],
+			"components": {
+				"MeshFilter": {
+					"type": "cube",
+					"mesh": null
+				},
+				"MeshRenderer": {
+					"enabled": true,
+					"material": null,
+					"castShadow": false,
+					"receiveShadow": false,
+					"lightMapStatic": false
+				},
+				"transform": {
+					"position": [
+						6.717929749019898,
+						1.5717447705006733,
+						-0.018179472002607444
+					],
+					"rotation": [
+						0,
+						0,
+						-14.780467178481118
+					],
+					"scale": [
+						0.028843530517391566,
+						0.7037300748326089,
+						0.9831781610918857
+					]
+				}
+			},
+			"position": [
+				9.511803265725652,
+				3.1955689589986536,
+				0.0017590657419701006
+			],
+			"scale": [
+				0.028843530517391563,
+				0.4921895331368236,
+				1.7049013079239332
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			]
+		},
+		"0a0c9347-1795-4286-bcd2-0f0b1576a186": {
+			"name": "视频展品5",
+			"tags": [],
+			"enabled": true,
+			"resource_id": "0a0c9347-1795-4286-bcd2-0f0b1576a186",
+			"parent": "364e757a-c675-4c7a-a7f5-c3c9c3d3e1da",
+			"children": [],
+			"layers": [
+				0
+			],
+			"components": {
+				"MeshFilter": {
+					"type": "cube",
+					"mesh": null
+				},
+				"MeshRenderer": {
+					"enabled": true,
+					"material": null,
+					"castShadow": false,
+					"receiveShadow": false,
+					"lightMapStatic": false
+				},
+				"transform": {
+					"position": [
+						5.67509671912833,
+						2.875278487515225,
+						1.4996255694914422
+					],
+					"rotation": [
+						24.565853429687234,
+						0,
+						0
+					],
+					"scale": [
+						1.0150903107331002,
+						0.7841285967752547,
+						0.0007239805109716781
+					]
+				}
+			},
+			"position": [
+				16.02828454342027,
+				4.768394553034726,
+				3.6473077139624315
+			],
+			"scale": [
+				2.988986268489021,
+				0.2422505365294444,
+				0.0007239805109716781
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			]
+		},
+		"ec349ce1-36b2-40b5-a50b-a9b5c0847df6": {
+			"name": "视频展品6",
+			"tags": [],
+			"enabled": true,
+			"resource_id": "ec349ce1-36b2-40b5-a50b-a9b5c0847df6",
+			"parent": "364e757a-c675-4c7a-a7f5-c3c9c3d3e1da",
+			"children": [],
+			"layers": [
+				0
+			],
+			"components": {
+				"MeshFilter": {
+					"type": "cube",
+					"mesh": null
+				},
+				"MeshRenderer": {
+					"enabled": true,
+					"material": null,
+					"castShadow": false,
+					"receiveShadow": false,
+					"lightMapStatic": false
+				},
+				"transform": {
+					"position": [
+						5.67509671912833,
+						1.5519829242923735,
+						0.9819913067990869
+					],
+					"rotation": [
+						14.907492929014662,
+						0,
+						0
+					],
+					"scale": [
+						1.0150903107331002,
+						0.7841285967752548,
+						0.015484720437489033
+					]
+				}
+			},
+			"position": [
+				16.02828454342027,
+				4.768394553034726,
+				3.6473077139624315
+			],
+			"scale": [
+				2.988986268489021,
+				0.2422505365294444,
+				0.0007239805109716781
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			]
+		},
+		"69bf49ff-001f-482a-80ca-30b96707952c": {
+			"name": "视频展品7",
+			"tags": [],
+			"enabled": true,
+			"resource_id": "69bf49ff-001f-482a-80ca-30b96707952c",
+			"parent": "364e757a-c675-4c7a-a7f5-c3c9c3d3e1da",
+			"children": [],
+			"layers": [
+				0
+			],
+			"components": {
+				"MeshFilter": {
+					"type": "cube",
+					"mesh": null
+				},
+				"MeshRenderer": {
+					"enabled": true,
+					"material": null,
+					"castShadow": false,
+					"receiveShadow": false,
+					"lightMapStatic": false
+				},
+				"transform": {
+					"position": [
+						4.1593674145480914,
+						2.8774014539012067,
+						-0.058269668016090514
+					],
+					"rotation": [
+						0,
+						0,
+						24.742029584742895
+					],
+					"scale": [
+						0.028843530517391563,
+						0.6892806896941343,
+						0.9832352804986842
+					]
+				}
+			},
+			"position": [
+				1.9733787662748563,
+				3.1980247985427903,
+				0.22853976565581724
+			],
+			"scale": [
+				0.028843530517391563,
+				0.4921895331368236,
+				1.7049013079239332
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			]
+		},
+		"5f2970d9-9979-44c0-a4ee-26b0ad80308b": {
+			"name": "视频展品8",
+			"tags": [],
+			"enabled": true,
+			"resource_id": "5f2970d9-9979-44c0-a4ee-26b0ad80308b",
+			"parent": "364e757a-c675-4c7a-a7f5-c3c9c3d3e1da",
+			"children": [],
+			"layers": [
+				0
+			],
+			"components": {
+				"MeshFilter": {
+					"type": "cube",
+					"mesh": null
+				},
+				"MeshRenderer": {
+					"enabled": true,
+					"material": null,
+					"castShadow": false,
+					"receiveShadow": false,
+					"lightMapStatic": false
+				},
+				"transform": {
+					"position": [
+						4.686614083430188,
+						1.570255468090913,
+						-0.058269668016090514
+					],
+					"rotation": [
+						0,
+						0,
+						14.396164885353343
+					],
+					"scale": [
+						0.028843530517391563,
+						0.6892806896941343,
+						0.9832352804986842
+					]
+				}
+			},
+			"position": [
+				1.9733787662748563,
+				3.1980247985427903,
+				0.22853976565581724
+			],
+			"scale": [
+				0.028843530517391563,
+				0.4921895331368236,
+				1.7049013079239332
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			]
+		},
+		"c8be97eb-79a8-4461-bd08-fd40f76da1b9": {
+			"name": "视频展品9",
+			"tags": [],
+			"enabled": true,
+			"resource_id": "c8be97eb-79a8-4461-bd08-fd40f76da1b9",
+			"parent": "364e757a-c675-4c7a-a7f5-c3c9c3d3e1da",
+			"children": [],
+			"layers": [
+				0
+			],
+			"components": {
+				"MeshFilter": {
+					"type": "cube",
+					"mesh": null
+				},
+				"MeshRenderer": {
+					"enabled": true,
+					"material": null,
+					"castShadow": false,
+					"receiveShadow": false,
+					"lightMapStatic": false
+				},
+				"transform": {
+					"position": [
+						6.459399941576985,
+						1.6113701083727554,
+						-9.539699725106425
+					],
+					"rotation": [
+						0,
+						0,
+						0
+					],
+					"scale": [
+						2.122857252868331,
+						1.0125620443511474,
+						0.00007967569399636442
+					]
+				}
+			},
+			"position": [
+				6.459399941576985,
+				1.6113701083727554,
+				-9.539699725106425
+			],
+			"scale": [
+				2.122857252868331,
+				1.0125620443511474,
+				0.00007967569399636442
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			]
+		},
+		"d6c256b6-ddb8-4eeb-ab56-29a7541c7e57": {
+			"name": "Player",
+			"tags": [],
+			"enabled": true,
+			"resource_id": "d6c256b6-ddb8-4eeb-ab56-29a7541c7e57",
+			"parent": "7a6d45c8-f67a-452c-b760-5a227ca72e48",
+			"children": [
+				"f29aea25-bb71-42ad-93e3-b51a5f1cc707"
+			],
+			"layers": [
+				0
+			],
+			"components": {
+				"transform": {
+					"position": [
+						-14.137836405108027,
+						1.5,
+						0
+					],
+					"rotation": [
+						0,
+						0,
+						0
+					],
+					"scale": [
+						1,
+						1,
+						1
+					]
+				},
+				"script": {
+					"enabled": true,
+					"order": [
+						"playerControl"
+					],
+					"scripts": {
+						"playerControl": {
+							"enabled": true,
+							"attributes": {
+							}
+						}
+					}
+				}
+			}
+		},
+		"f29aea25-bb71-42ad-93e3-b51a5f1cc707": {
+			"name": "相机",
+			"tags": [],
+			"enabled": true,
+			"resource_id": "f29aea25-bb71-42ad-93e3-b51a5f1cc707",
+			"parent": "d6c256b6-ddb8-4eeb-ab56-29a7541c7e57",
+			"children": [],
+			"layers": [
+				0
+			],
+			"components": {
+				"Camera": {
+					"enabled": true,
+					"cullingMask": [
+						1,
+						1,
+						1,
+						1
+					],
+					"Projection": "Perspective",
+					"field_of_view": 45,
+					"frustumSize": 0,
+					"nearClipPlane": 0.3,
+					"farClipPlane": 1000,
+					"aspect": 2,
+					"targetTexture": null
+				},
+				"transform": {
+					"position": [
+						0,
+						0,
+						0
+					],
+					"rotation": [
+						0,
+						-90,
+						0
+					],
+					"scale": [
+						1,
+						1,
+						1
+					]
+				}
+			},
+			"position": [
+				-9.823069613150679,
+				1.3176157934420236,
+				0
+			],
+			"scale": [
+				1,
+				1,
+				1
+			],
+			"rotation": [
+				0,
+				-90,
+				0
+			]
+		},
+		"4854d737-16ff-45b7-b9fa-33946658dba3": {
+			"name": "讲解",
+			"tags": [],
+			"enabled": true,
+			"resource_id": "4854d737-16ff-45b7-b9fa-33946658dba3",
+			"parent": "7a6d45c8-f67a-452c-b760-5a227ca72e48",
+			"children": [
+				"ed261c9f-1bde-4800-8742-941a4d413ed1",
+				"df588533-7d74-491a-99cc-2fced99d1dd2",
+				"6eae8ff1-475b-49fc-a9cf-afffff37cc51",
+				"d4997c6b-aa5c-47b3-981e-79bfa6a0994d",
+				"08d07017-697a-444b-ae55-3aedb2e9543e",
+				"564954cc-cbe6-412f-8e77-0b5b52ca22df",
+				"dbe569ce-79de-4aab-b3b1-07a895f6e640"
+			],
+			"layers": [
+				0
+			],
+			"components": {
+				"transform": {
+					"position": [
+						0,
+						0,
+						0
+					],
+					"rotation": [
+						0,
+						0,
+						0
+					],
+					"scale": [
+						1,
+						1,
+						1
+					]
+				}
+			}
+		},
+		"ed261c9f-1bde-4800-8742-941a4d413ed1": {
+			"name": "讲解1",
+			"tags": [],
+			"enabled": true,
+			"resource_id": "ed261c9f-1bde-4800-8742-941a4d413ed1",
+			"parent": "4854d737-16ff-45b7-b9fa-33946658dba3",
+			"children": [],
+			"layers": [
+				0
+			],
+			"components": {
+				"MeshFilter": {
+					"type": "cube",
+					"mesh": null
+				},
+				"MeshRenderer": {
+					"enabled": true,
+					"material": null,
+					"castShadow": false,
+					"receiveShadow": false,
+					"lightMapStatic": false
+				},
+				"transform": {
+					"position": [
+						13.35945129932704,
+						1.95707384978528,
+						8.884776027342399
+					],
+					"rotation": [
+						0,
+						0,
+						0
+					],
+					"scale": [
+						1.7025770685638995,
+						0.6899696435868018,
+						0.026906885939693544
+					]
+				}
+			},
+			"position": [
+				13.35945129932704,
+				1.95707384978528,
+				8.884776027342399
+			],
+			"scale": [
+				1.7025770685638995,
+				0.6899696435868018,
+				0.026906885939693544
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			]
+		},
+		"df588533-7d74-491a-99cc-2fced99d1dd2": {
+			"name": "讲解2",
+			"tags": [],
+			"enabled": true,
+			"resource_id": "df588533-7d74-491a-99cc-2fced99d1dd2",
+			"parent": "4854d737-16ff-45b7-b9fa-33946658dba3",
+			"children": [],
+			"layers": [
+				0
+			],
+			"components": {
+				"MeshFilter": {
+					"type": "cube",
+					"mesh": null
+				},
+				"MeshRenderer": {
+					"enabled": true,
+					"material": null,
+					"castShadow": false,
+					"receiveShadow": false,
+					"lightMapStatic": false
+				},
+				"transform": {
+					"position": [
+						-1.9679060296542539,
+						0.4215827351870137,
+						8.172009836973057
+					],
+					"rotation": [
+						60.461557268053646,
+						0,
+						0
+					],
+					"scale": [
+						1.2758778544028722,
+						0.5704900437851131,
+						0.025048086281283397
+					]
+				}
+			},
+			"position": [
+				-1.9679060296542539,
+				0.4215827351870137,
+				8.172009836973057
+			],
+			"scale": [
+				1.2758778544028722,
+				0.5704900437851131,
+				0.025048086281283397
+			],
+			"rotation": [
+				60.461557268053646,
+				0,
+				0
+			]
+		},
+		"6eae8ff1-475b-49fc-a9cf-afffff37cc51": {
+			"name": "讲解3",
+			"tags": [],
+			"enabled": true,
+			"resource_id": "6eae8ff1-475b-49fc-a9cf-afffff37cc51",
+			"parent": "4854d737-16ff-45b7-b9fa-33946658dba3",
+			"children": [],
+			"layers": [
+				0
+			],
+			"components": {
+				"MeshFilter": {
+					"type": "cube",
+					"mesh": null
+				},
+				"MeshRenderer": {
+					"enabled": true,
+					"material": null,
+					"castShadow": false,
+					"receiveShadow": false,
+					"lightMapStatic": false
+				},
+				"transform": {
+					"position": [
+						-9.984266865084846,
+						3.5631083967739943,
+						8.806893324070186
+					],
+					"rotation": [
+						0,
+						0,
+						0
+					],
+					"scale": [
+						0.9032415868871514,
+						0.38971930488167084,
+						0.026906885939693544
+					]
+				}
+			},
+			"position": [
+				-9.984266865084846,
+				3.5631083967739943,
+				8.806893324070186
+			],
+			"scale": [
+				0.9032415868871514,
+				0.38971930488167084,
+				0.026906885939693544
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			]
+		},
+		"d4997c6b-aa5c-47b3-981e-79bfa6a0994d": {
+			"name": "视频讲解1",
+			"tags": [],
+			"enabled": true,
+			"resource_id": "d4997c6b-aa5c-47b3-981e-79bfa6a0994d",
+			"parent": "4854d737-16ff-45b7-b9fa-33946658dba3",
+			"children": [],
+			"layers": [
+				0
+			],
+			"components": {
+				"MeshFilter": {
+					"type": "cube",
+					"mesh": null
+				},
+				"MeshRenderer": {
+					"enabled": true,
+					"material": null,
+					"castShadow": false,
+					"receiveShadow": false,
+					"lightMapStatic": false
+				},
+				"transform": {
+					"position": [
+						5.56263878873934,
+						3.1955689589986536,
+						-3.6568485133316755
+					],
+					"rotation": [
+						0,
+						0,
+						0
+					],
+					"scale": [
+						1.7288684936943646,
+						0.4921895331368236,
+						0.026906885939693544
+					]
+				}
+			},
+			"position": [
+				5.56263878873934,
+				3.1955689589986536,
+				-3.6568485133316755
+			],
+			"scale": [
+				1.7288684936943646,
+				0.4921895331368236,
+				0.026906885939693544
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			]
+		},
+		"08d07017-697a-444b-ae55-3aedb2e9543e": {
+			"name": "视频讲解2",
+			"tags": [],
+			"enabled": true,
+			"resource_id": "08d07017-697a-444b-ae55-3aedb2e9543e",
+			"parent": "4854d737-16ff-45b7-b9fa-33946658dba3",
+			"children": [],
+			"layers": [
+				0
+			],
+			"components": {
+				"MeshFilter": {
+					"type": "cube",
+					"mesh": null
+				},
+				"MeshRenderer": {
+					"enabled": true,
+					"material": null,
+					"castShadow": false,
+					"receiveShadow": false,
+					"lightMapStatic": false
+				},
+				"transform": {
+					"position": [
+						9.511803265725652,
+						3.1955689589986536,
+						0.0017590657419701006
+					],
+					"rotation": [
+						0,
+						0,
+						0
+					],
+					"scale": [
+						0.028843530517391563,
+						0.4921895331368236,
+						1.7049013079239332
+					]
+				}
+			},
+			"position": [
+				9.511803265725652,
+				3.1955689589986536,
+				0.0017590657419701006
+			],
+			"scale": [
+				0.028843530517391563,
+				0.4921895331368236,
+				1.7049013079239332
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			]
+		},
+		"564954cc-cbe6-412f-8e77-0b5b52ca22df": {
+			"name": "视频讲解3",
+			"tags": [],
+			"enabled": true,
+			"resource_id": "564954cc-cbe6-412f-8e77-0b5b52ca22df",
+			"parent": "4854d737-16ff-45b7-b9fa-33946658dba3",
+			"children": [],
+			"layers": [
+				0
+			],
+			"components": {
+				"MeshFilter": {
+					"type": "cube",
+					"mesh": null
+				},
+				"MeshRenderer": {
+					"enabled": true,
+					"material": null,
+					"castShadow": false,
+					"receiveShadow": false,
+					"lightMapStatic": false
+				},
+				"transform": {
+					"position": [
+						5.873600937698924,
+						3.1955689589986536,
+						3.5517414128788154
+					],
+					"rotation": [
+						0,
+						0,
+						0
+					],
+					"scale": [
+						1.7288684936943646,
+						0.4921895331368236,
+						0.026906885939693544
+					]
+				}
+			},
+			"position": [
+				5.873600937698924,
+				3.1955689589986536,
+				3.5517414128788154
+			],
+			"scale": [
+				1.7288684936943646,
+				0.4921895331368236,
+				0.026906885939693544
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			]
+		},
+		"dbe569ce-79de-4aab-b3b1-07a895f6e640": {
+			"name": "视频讲解4",
+			"tags": [],
+			"enabled": true,
+			"resource_id": "dbe569ce-79de-4aab-b3b1-07a895f6e640",
+			"parent": "4854d737-16ff-45b7-b9fa-33946658dba3",
+			"children": [],
+			"layers": [
+				0
+			],
+			"components": {
+				"MeshFilter": {
+					"type": "cube",
+					"mesh": null
+				},
+				"MeshRenderer": {
+					"enabled": true,
+					"material": null,
+					"castShadow": false,
+					"receiveShadow": false,
+					"lightMapStatic": false
+				},
+				"transform": {
+					"position": [
+						1.9733787662748563,
+						3.1980247985427903,
+						0.22853976565581724
+					],
+					"rotation": [
+						0,
+						0,
+						0
+					],
+					"scale": [
+						0.028843530517391563,
+						0.4921895331368236,
+						1.7049013079239332
+					]
+				}
+			},
+			"position": [
+				1.9733787662748563,
+				3.1980247985427903,
+				0.22853976565581724
+			],
+			"scale": [
+				0.028843530517391563,
+				0.4921895331368236,
+				1.7049013079239332
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			]
+		}
+	},
+	"created": "2020-09-01T06:57:22.730Z",
+	"modified": "2020-09-07T03:38:00.972Z"
+}

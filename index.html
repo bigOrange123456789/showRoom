@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no' />
+    <meta charset='utf-8'>
+    <style></style>
+    <title>webVR展厅</title>
+    <style>
+	body{
+        overflow:scroll;overflow-x:hidden;overflow-y:hidden;
+        margin:0px;
+    }
+    </style>
+    <script>
+        upLoadServerIp="http://192.168.1.231:8888";
+        CONFIG_PATH = "config.json";
+    </script>
+
+</head>
+<body>
+<!--开始上传图片的部分-->
+<div id="selectPicPanel" style="position:fixed;left:300px;top:180px;margin-top:20px;border:5px solid #0ff;width:530px;height:300px;background: #ffffff;display:none;">
+    <div style="position:absolute;left:90px;">
+        <h1 id="mytext00"style="font-size:35px">展板位置：1</h1>
+        <h1 id="mytext01"style="font-size:35px">支持图片格式：jpg</h1>
+        <h1 id="mytext02"style="font-size:35px">建议长宽比：1.5</h1>
+        <button onclick="selectPic()"style="font-size:20px;width:200px;height:40px">选择图片</button>
+    </div>
+</div>
+<div style="display: none">
+    <form action="http://localhost:8888/upload?pic_name=123" id="myform"method="POST" target="frame1"enctype="multipart/form-data">
+        <input type="file" accept="image/jpg,image/png,image/jpeg,image/gif" required name="photo"onchange="have_update()">
+        <input type="submit" value="上传图像">
+    </form>
+    <iframe name="frame1"></iframe>
+</div>
+<script>
+    var selectPicPanel=document.getElementById('selectPicPanel');
+    var submit = document.querySelectorAll('input')[1]
+    var fileData =document.querySelectorAll('input')[0]// document.createElement("input");
+    var NewPic=-1;//第几个位置有新资源
+    var haveNewPic=-1;//第几个位置有新资源
+    function have_update(){
+        submit.click();
+        document.querySelectorAll('input')[0].value='';
+        selectPicPanel.style.display='none';
+        if(typeof(haveNewPic)!='undefined')haveNewPic=NewPic;//第几个位置有新资源
+        console.log(haveNewPic,NewPic);
+        NewPic=-1;
+        //alert(NewPic);
+    }
+    function selectPic() {
+        fileData.click();
+    }
+</script>
+<!--完成上传图片的部分-->
+<script src="./files/test/ParameMeasure.js"></script>
+<script src="./files/test/Draw3D.js"></script>
+
+<script src="./files/playerControl/PlayerControlAssistant.js"></script>
+<script src="./files/playerControl/RadioMonitor.js"></script>
+<script src="./files/playerControl/preview/screenForth.js"></script>
+<script src="./files/playerControl/preview/moveScreen.js"></script>
+<script src="./files/playerControl/PreviewManager.js"></script>
+
+<script src="./files/sceneSet/SpriteCard.js"></script>
+<script src="./files/sceneSet/LightManager.js"></script>
+<script src="./files/sceneSet/AvatarManager.js"></script>
+<script src="./files/sceneSet/BoardNet.js"></script>
+<script src="./files/sceneSet/Box.js"></script>
+<script src="./files/sceneSet/Beam.js"></script>
+<script src="./files/sceneSet/Img3D.js"></script>
+<script src="./files/sceneSet/RoomManager.js"></script>
+<script src="./files/sceneSet/ExhibitionsManager.js"></script>
+
+<script src="./files/engineerTool.js"></script>
+<script src="./myUI.js"></script>
+<script src="./avatar_tool.js"></script>
+<script src="myparam.js"></script>
+<!--开始取消浏览器自带的鼠标右键检测-->
+<script>
+    function doNothing(){
+        window.event.returnValue=false;
+        return false;
+    }
+</script>
+<body oncontextmenu="doNothing()">
+<!--完成取消浏览器自带的鼠标右键检测-->
+    <!-- 引擎依赖-->
+
+    <script src="build/three.js"></script>
+    <script src="libs/js/loader/RGBELoader.js"></script>
+    <script src="./libs/js/libs/inflate.min.js"></script>
+    <script src="./libs/js/loader/EXRLoader.js"></script>
+
+    <script src="./libs/js/postprocessing/EffectComposer.js"></script>
+    <script src="./libs/js/postprocessing/MaskPass.js"></script>
+    <script src="./libs/js/postprocessing/RenderPass.js"></script>
+    <script src="./libs/js/postprocessing/ShaderPass.js"></script>
+    <script src="./libs/js/postprocessing/UnrealBloomPass.js"></script>
+    <script src="./libs/threejs104/js/postprocessing/SSAOPass.js"></script>
+    <script src="./libs/threejs104/js/postprocessing/AdaptiveToneMappingPass.js"></script>
+
+    <script src="./libs/js/shaders/CopyShader.js"></script>
+    <script src="./libs/js/shaders/LuminosityHighPassShader.js"></script>
+    <script src="./libs/threejs104/js/shaders/SSAOShader.js"></script>
+    <script src="./libs/threejs104/js/shaders/VignetteShader.js"></script>
+    <script src="./libs/threejs104/js/shaders/ToneMapShader.js"></script>
+    <script src="./libs/threejs104/js/shaders/LuminosityShader.js"></script>
+
+    <script src="./libs/threejs104/js/SimplexNoise.js"></script>
+
+    <script src="build/ammo.js"></script>
+    <script src="build/Web3DEngine.js"></script>
+    <script src="build/W3DJsonConverter.js"></script>
+    <script type="module">import './js/nodes/THREE.Nodes.js';</script>
+
+    <script src="start.js"></script>
+
+	<script>
+        var assetServer = location.origin;
+    </script>
+
+</body>
+</html>

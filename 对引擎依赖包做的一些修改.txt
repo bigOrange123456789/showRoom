@@ -1,0 +1,17 @@
+
+使得引擎按照json中的资源真正按照json中的path访问
+位置：start.js
+(1)
+#59更改前 assetsAdd(assetsData[assetId], onProgress); 
+->更改后   assetsAdd(assetsData[assetId], onProgress,assetsData);
+#63更改前 function assetsAdd (asset, callback) 
+->更改后   function assetsAdd (asset, callback,assetsData)
+#74更改前
+assetJson.file.url[i] = "files/assets/" + texAsset.id + "/" + texAsset.file.filename;
+#74更改后
+assetJson.file.url[i] =assetsData[assetJson.data.textures[i]].file.path;
+(2)
+#84更改前
+assetJson.file.url = "files/assets/" + assetJson.id + "/" + assetJson.file.filename;
+#84更改后
+assetJson.file.url =assetJson.file.path;
