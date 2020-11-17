@@ -12,12 +12,14 @@ Web3DEngine.ExtendType( PlayerControl , Web3DEngine.MonoBehaviour, {
         if (this.f < 100)this.f++;
     }
 });
-function mytest(){
+/*function mytest(){
 
-    var cylinder=new THREE.CylinderGeometry(0.3,1,8,50,5);//顶面半径, 底面半径, 圆柱体的高度, 顶面分段, 高度分段
+    var geo=new THREE.CylinderGeometry(0.3,1,8,50,5);//顶面半径, 底面半径, 圆柱体的高度, 顶面分段, 高度分段
+
+    var igeo=new THREE.InstancedBufferGeometry();
+
     var material= new THREE.MeshBasicMaterial({color:0xffffff, transparent: true,opacity: 0.5 });
-    //var mesh= new THREE.InstancedMesh(cylinder, material,1);
-    var mesh= new THREE.Mesh(cylinder, material);
+    var mesh= new THREE.Mesh(geo, material);
     var scene    =appInst._renderScenePass.scene;
     scene.add(mesh);
 }
@@ -52,7 +54,7 @@ function makeInstanced(geo, mtxObj, oriName, type) {
     var vertices = geo.attributes.position.clone();
     igeo.addAttribute('position', vertices);//设置几何中的点
     igeo.setIndex(geo.index);
-    var mcol0 = new THREE.InstancedBufferAttribute(
+    var mcol0 = new THREE.InstancedBufferAttribute(//?
         new Float32Array(instanceCount * 3), 3
     );
     var mcol1 = new THREE.InstancedBufferAttribute(
@@ -66,7 +68,6 @@ function makeInstanced(geo, mtxObj, oriName, type) {
     );
 
     //设置原始mesh的变换矩阵与名称
-    //setXYZ(i,x,y,z)
     mcol0.setXYZ(0, 1, 0, 0);
     mcol1.setXYZ(0, 0, 1, 0);
     mcol2.setXYZ(0, 0, 0, 1);
@@ -101,12 +102,12 @@ function makeInstanced(geo, mtxObj, oriName, type) {
     mesh.frustumCulled = false;
     mesh.name = oriName;
     sceneRoot.add(mesh);
-}
+}*/
 function playerControl(f,myThis){
     sceneSet(f);
     updateWindowSize();
     if (f == 1) {
-        mytest();
+        //mytest();
         //var mesh=myDraw3D.draw();new ParameMeasure(mesh,0);
 
         myPlayerControlAssistant.player = myThis;
