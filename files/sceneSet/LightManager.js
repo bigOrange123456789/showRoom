@@ -60,11 +60,11 @@ function LightManager(){
         obj2.getComponent(Web3DEngine.Light).intensity=15;
         //完成设置照亮校徽的灯光
 
-        var obj=myLightManager.createSpotLight([ -9.6,  4.1,  6.9]);
+        /*var obj=myLightManager.createSpotLight([ -9.6,  4.1,  6.9]);
         obj.getComponent(Web3DEngine.Light).intensity=4;
         obj.getComponent(Web3DEngine.Light).range=9;
         obj.getComponent(Web3DEngine.Light).spotAngle=75*Math.PI/180;//40;
-
+*/
         /*var obj=myLightManager.createSpotLight([-4.3000001,  3.200015,  0.100]);
         obj.getComponent(Web3DEngine.Light).range=5;
         obj.getComponent(Web3DEngine.Light).intensity=15;*/
