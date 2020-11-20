@@ -15,8 +15,8 @@ function RadioMonitor() {
          var myThis=this;
          document.body.onmousedown = function (event) {//点击事件的监听
             if(document.getElementById('selectPicPanel').style.display=='none')
-                if (event.button === 0) {
-                    flag = 0;
+                if (event.button === 0) {//左键
+                    flag = 0;//记录已经显示的展品图片个数
                     for (j = 0; j < myExhibitionsManager.myimgpanel.length; j++) {
                         if (myExhibitionsManager.myimgpanel[j].style.display == 'block') {
                             flag++;
@@ -39,7 +39,11 @@ function RadioMonitor() {
                         var planeIntersects = ray.intersectObjects(objs, true);
                         var planeIntersect = planeIntersects[0] || false;
                         if (planeIntersect) {//点击到展板
-                            myExhibitionsManager.myimgpanel[planeIntersect.object.name].style.display = 'block';
+                            console.log(planeIntersect);//左键的时候这里输出了
+                            console.log(myExhibitionsManager.myimgpanel[planeIntersect.object.name].style.display);
+                            myExhibitionsManager.myimgpanel[planeIntersect.object.name].style.display = 'block';//变为了block，但是没有被显示
+                            //图片的宽为0，高为0
+                            console.log(myExhibitionsManager.myimgpanel[planeIntersect.object.name]);
                         } else if (!camera.pointOnImg(event.pageX, event.pageY)) {//没有点击到展板，检测点击到地板的位置
                             //开始二级点击检测
                             //var myroomobj=appInst._renderScenePass.scene.children[1].children[0].children[4].children[0].children[0].children[0];

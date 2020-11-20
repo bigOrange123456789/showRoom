@@ -2,7 +2,7 @@ var myExhibitionsManager=new ExhibitionsManager();
 function ExhibitionsManager(){
     //需要用于布置展板的全局变量boardsParam、用于获取相机的appInst
     this.boards=[];
-    this.myimgpanel=[];
+    this.myimgpanel=[];//里面存放了各个展品的DIV
     this.myimgpanel_bg=[];
 
     //以下为被控制展板的相关信息
@@ -85,6 +85,8 @@ function ExhibitionsManager(){
             this.myimgpanel_bg[i-1].img.onload = function(){
                 window.myflag++;
                 if(window.myflag==53){
+                    //这里myH myW为空导致了图片大小被错误的设置为了0
+                    var myW=window.innerWidth,myH=window.innerHeight;
                     for(var j=0;j<THIS.myimgpanel_bg.length;j++){
                         var k=THIS.myimgpanel_bg[j];
                         if(k.img.width/myW>k.img.height/myH){
@@ -96,6 +98,42 @@ function ExhibitionsManager(){
                             k.img.height=myH;
                             THIS.myimgpanel[j].style.left=(myW-k.img.width)/2+'px';
                         }
+                        console.log(k.img.width,k.img.height);
+                    }//for
+                }
+            };//onload
+        }//for(var i=1;i<54;i++)
+    }
+    this.setImg0=function () {
+        window.myflag=0;
+        for(var i=1;i<54;i++){
+            this.myimgpanel.push( document.createElement('div'));
+            //this.myimgpanel[i-1].style = 'text-align: center;position:fixed;left:0px;top:0px;margin-top:0px;border:0px solid #0ff;width:'+myW+'px;height:'+myH+'px;display:none;';
+            this.myimgpanel[i-1].style = 'position:fixed;left:0px;top:0px;margin-top:0px;border:0px solid #0ff;width:'+myW+'px;height:'+myH+'px;display:none;';
+            document.body.appendChild(this.myimgpanel[i-1]);
+
+            var k={};
+            k.img = new Image();
+            k.img.src = 'pic/'+i+'.jpg';
+            this.myimgpanel[i-1].appendChild(k.img);
+            this.myimgpanel_bg.push(k);
+            var THIS=this;//myimgpanel_bg=this.myimgpanel_bg;
+
+            this.myimgpanel_bg[i-1].img.onload = function(){
+                window.myflag++;
+                if(window.myflag==53){
+                    for(var j=0;j<THIS.myimgpanel_bg.length;j++){
+                        var k=THIS.myimgpanel_bg[j];
+                        if(k.img.width/myW>k.img.height/myH){
+                            k.img.height=k.img.height*myW/k.img.width;
+                            k.img.width=myW;
+                            THIS.myimgpanel[j].style.top=(myH-k.img.height)/2+'px';
+                        }else{
+                            k.img.width=k.img.width*myH/k.img.height;
+                            k.img.height=myH;
+                            THIS.myimgpanel[j].style.left=(myW-k.img.width)/2+'px';
+                        }
+                        console.log(k.img.width,k.img.height);
                     }//for
                 }
             };//onload
