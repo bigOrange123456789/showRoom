@@ -48,9 +48,9 @@ function LightManager(){
     this.myInit=function(n){
         if(n==0)this.myInit0();
         if(n==1);//for(var k=0;k<=0;k++)myLightManager.createSpotLight0([boardsParam[k][3],3.6,boardsParam[k][5]],2);
-        if(n==4)for(var k=1;k<=3;k++)myLightManager.createSpotLight0([boardsParam[k][3],3.6,boardsParam[k][5]],1);
-        if(n==2)for(var k=4;k<=10;k++)myLightManager.createSpotLight0([boardsParam[k][3],3.6,boardsParam[k][5]],2);
-        if(n==3)for(var k=11;k<=13;k++)myLightManager.createSpotLight0([boardsParam[k][3],3.6,boardsParam[k][5]],3);
+        //if(n==4)for(var k=1;k<=3;k++)myLightManager.createSpotLight0([boardsParam[k][3],3.6,boardsParam[k][5]],1);
+        //if(n==2)for(var k=4;k<=10;k++)myLightManager.createSpotLight0([boardsParam[k][3],3.6,boardsParam[k][5]],2);
+        //if(n==3)for(var k=11;k<=13;k++)myLightManager.createSpotLight0([boardsParam[k][3],3.6,boardsParam[k][5]],3);
         if(n==5)for(var k=47;k<=50;k++)myLightManager.createSpotLight0([boardsParam[k][3],3.6+1,boardsParam[k][5]-0.3],4);
     }
     this.myInit0=function(){

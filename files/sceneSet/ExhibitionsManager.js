@@ -98,7 +98,6 @@ function ExhibitionsManager(){
                             k.img.height=myH;
                             THIS.myimgpanel[j].style.left=(myW-k.img.width)/2+'px';
                         }
-                        console.log(k.img.width,k.img.height);
                     }//for
                 }
             };//onload
