@@ -36,7 +36,48 @@ function RoomManager(){
                 mesh._originalAsset = gltf;
                 gltf.scene._imp.castShadow=true;
                 gltf.scene._imp.receiveShadow=true;
-                console.log(gltf.scene);
+                console.log(gltf.scene);//_imp//transform._children[8]
+                console.log(gltf.scene.transform._children[8].gameObject);//_imp
+                console.log(gltf.scene.transform._children[8].gameObject._imp);
+
+
+
+                var obj000=gltf.scene.transform._children[8].gameObject;
+                var mesh000=gltf.scene.transform._children[8].gameObject._imp;
+                mesh000.geometry.computeBoundingBox();//计算包围盒
+                mesh000.position.set(
+                    -4.45,-1.89,9.6);/**/
+                var obj001=new THREE.Object3D();
+                obj001.position.set(
+                    4.45,1.89,-9.6);/**/
+                obj001.add(mesh000);
+                gltf.scene._imp.add(obj001);
+                //mesh000.position.
+                //var myobj000=gltf.scene.transform._children[8].gameObject;
+                //myobj000.remove(myobj000.parent);
+                //myobj000.getComponent(Web3DEngine.Transform).localPosition=new THREE.Vector3(1,0,0);
+
+                function test(){
+                    obj001.rotateZ(Math.PI/100);
+                    /*obj001.rotateOnAxis(
+                        mesh000.geometry.boundingSphere.center.x,
+                        mesh000.geometry.boundingSphere.center.y,
+                        mesh000.geometry.boundingSphere.center.z);
+                    myobj001.rotation.set(
+                        myobj001.rotation.x,
+                        myobj001.rotation.y+0.002,
+                        myobj001.rotation.z
+                    );
+                    myobj000.getComponent(Web3DEngine.Transform).localEulerAngles=
+                        new THREE.Vector3(
+                            myobj000.getComponent(Web3DEngine.Transform).localEulerAngles.x,
+                            myobj000.getComponent(Web3DEngine.Transform).localEulerAngles.y+0.1,
+                            myobj000.getComponent(Web3DEngine.Transform).localEulerAngles.z);
+                    */
+                    //new THREE.Vector3(1,0,0);
+
+                    requestAnimationFrame(test);
+                }test();
                 gltf.scene._imp.traverse(node=>{
                     if(node.material){
                         if(node.material.map!=null) {
