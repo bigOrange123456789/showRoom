@@ -29,8 +29,10 @@ function RoomManager(){
 
 
         var loader2=new Web3DEngine._W3DGLTFLoader;
+        for(var i=0;i<12;i++)
+        //var myUrl='files/assets/room/room2.glb';
         loader2.load(
-            'files/assets/room/room2.glb',//'robot06.glb',//'files/assets/man.glb',//'birds.glb',//'files/assets/man.glb',
+            'files/assets/room/new'+i+'.gltf',//'robot06.glb',//'files/assets/man.glb',//'birds.glb',//'files/assets/man.glb',
             function ( gltf ) {//console.log(Web3DEngine.SceneManager.GetActiveScene()._imp.children);
                 var mesh = new Web3DEngine.Mesh;
                 mesh._originalAsset = gltf;
