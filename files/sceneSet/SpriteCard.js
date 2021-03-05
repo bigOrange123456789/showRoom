@@ -1,7 +1,7 @@
 function SpriteCard() {
     this.sprite=new THREE.Object3D();
     this.scale=[1,1,1];//精灵卡的放缩
-    this.text='Welcome!';
+    this.text='';//'Welcome!';
     this.fontface="Arial";//字体
     this.fontsize=100;//字体大小
     this.pos=[-1.9,1,-7.4];//-0.1921826909950316  ,  1.5  ,  -7.4438927487
